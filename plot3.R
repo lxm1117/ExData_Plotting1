@@ -5,7 +5,8 @@ days<-paste(subdata$Date, subdata$Time)
 days<-as.POSIXlt(days, format="%d/%m/%Y %H:%M:%S")
 
 
-png(filename="plot3.png", width=480, height=480, units="px")> plot(days, subdata$Sub_metering_1, type="l", lwd=1, col="Black", xlab=" ", ylab="Energy sub metering")
+png(filename="plot3.png", width=480, height=480, units="px")
+plot(days, subdata$Sub_metering_1, type="l", lwd=1, col="Black", xlab=" ", ylab="Energy sub metering")
 
 lines(days, subdata$Sub_metering_2, col="Red")
 lines(days, subdata$Sub_metering_3, col="Blue")
